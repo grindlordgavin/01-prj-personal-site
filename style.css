@@ -1,9 +1,14 @@
+canvas {
+  position: absolute; /* canvas takes up no space in the layout */
+  z-index: -1; /* canvas is behind all other elements */
+}
+
 body {
   background: #fffcf2;
 }
 
 nav {
-   background-color: #eb5e28;
+   background-color: transparent;
 }
 
 /* Navbar brand and links should be white */
@@ -15,8 +20,13 @@ nav {
 
 /* Hero section with warm gradient background and white text */
 .hero {
-  background: linear-gradient(135deg, #eb5e28 0%, #eb5e28 100%);
+  background: transparent;
   color: #fff;
+}
+
+.hero img {
+  height: 135px;
+  width: auto;
 }
 
 .hero p.lead {
