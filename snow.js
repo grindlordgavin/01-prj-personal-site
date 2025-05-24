@@ -39,7 +39,7 @@ class Snowflake {
 
   update(deltaTime) {
     this.x += this.speedX * deltaTime;
-    this.y -= this.speedY * deltaTime;
+    this.y += this.speedY * deltaTime;
 
     // update angle
     this.angle += this.angularSpeed * deltaTime;
@@ -77,6 +77,7 @@ for (let i = 0; i < 100; i++) {
 
 function update(deltaTime) {
   console.log(`Updating snowflakes with deltaTime: ${deltaTime}`);
+  if (deltaTime > 0.5) return; // skip if deltaTime is too large (e.g., if the tab was inactive)
   // draw orang color
   ctx.fillStyle = '#eb5e28';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -90,11 +91,11 @@ function update(deltaTime) {
 
 let prev;
 // call update every frame
-function loop(timestamp) { // default to 60 FPS
-  let millis = prev ? prev - timestamp : 0;
+function loop(now) { // default to 60 FPS
+  let millis = prev ? now - prev : 0;
   update(millis / 1000);
 
-  prev = timestamp;
+  prev = now;
   requestAnimationFrame(loop);
 }
 
