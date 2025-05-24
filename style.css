@@ -1,1 +1,130 @@
-/* Add you CSS here */
+body {
+  background: #fffcf2;
+}
+
+nav {
+   background-color: #eb5e28;
+}
+
+/* Navbar brand and links should be white */
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+/* Hero section with warm gradient background and white text */
+.hero {
+  background: linear-gradient(135deg, #eb5e28 0%, #eb5e28 100%);
+  color: #fff;
+}
+
+.hero p.lead {
+  position: relative;
+  top: 1.2rem;
+  font-size: 1.65rem;
+  font-weight: 500;
+}
+
+
+/* Underline hover animation for navbar links */
+.navbar-nav .nav-link {
+  position: relative;
+  transition: color 0.2s;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Project card image: crop and center images, taller height */
+.card-img-top.project-img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 260px; /* Increased height for taller images */
+  background: #eee;
+}
+
+/* Tech badge icons: uniform height, variable width */
+.tech-badges {
+  margin-bottom: 10px;
+}
+.tech-badges img {
+  height: 28px; /* Uniform height */
+  width: auto;  /* Variable width */
+  margin-right: 4px;
+  vertical-align: middle;
+  background: #fff;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+/* Project card: flex column to push button to bottom */
+.card.h-100 {
+  display: flex;
+  flex-direction: column;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+.github-btn {
+  margin-top: auto;
+  background: #24292e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.2s;
+  max-width: 100%;
+  align-self: flex-start;
+}
+.github-btn:hover {
+  background: #444d56;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* GitHub icon in button: white */
+.github-btn img {
+  filter: brightness(0) invert(1);
+  height: 20px;
+  width: 20px;
+  margin-right: 6px;
+}
+
+/* Special rule for SDL2 badge: extra left margin */
+.tech-badges img[alt="SDL2"] {
+  position: relative;
+  top: .15rem;
+  margin-left: 0.25rem;
+}
+
+#about p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+#projects h2 {
+  margin-bottom: 1.6rem;
+}

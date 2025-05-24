@@ -1,0 +1,42 @@
+# NOTE: never fetched by the client, i just used this file to prompt copilot
+
+- name: beater
+  img: beater.jpg
+  description: 6052 based breadboard computer
+  techs: 
+    - C
+  github: https://github.com/micycle8778/beater
+- name: fling_the_creeps
+  img: fling_the_creeps.jpg
+  description: simple game where you fling enemies at each other
+  techs:
+    - C++
+    - raylib
+  github: https://github.com/micycle8778/fling_the_creeps
+- name: qr-portal2d
+  img: qr-portal2d.png
+  description: QR code generator website
+  techs:
+    - Rust
+    - HTML5
+  github: https://github.com/micycle8778/qr-portal2d
+- name: crowncalc
+  img: crowncalc.png
+  description: basic graphical and text calculator
+  techs:
+    - Nim
+    - SDL2
+  github: https://github.com/micycle8778/crowncalc
+- name: host
+  img: host.png
+  description: simple command line utility for hosting static files
+  techs:
+    - Nim
+    - HTML5
+  github: https://github.com/micycle8778/host
+- name: YoYo
+  img: yoyo.png
+  description: simple discord bot that repeats messages
+  techs:
+    - Python
+  github: https://github.com/micycle8778/YoYo

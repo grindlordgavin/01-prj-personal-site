@@ -3,9 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <title>My Personal Site</title>
+
+  <!-- Add Bootstrap CSS link -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">My Portfolio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <!-- Removed Home nav item -->
+          <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero text-center text-white py-5">
+    <!-- Hero image and heading -->
+    <img src="img/me.png" alt="My Photo" class="rounded-circle mb-3" width="120">
+    <!-- Removed the hero title h1 -->
+    <p class="lead">Hi! I'm Michael Campbell, a software engineer.</p>
+  </section>
+
+  <!-- Bio Section -->
+  <section id="about" class="container my-5">
+    <h2>About Me</h2>
+    <p>
+      <!-- Write a short bio here -->
+      I’m a curious and creative programmer who loves building software that solves real problems (or just scratches an itch). Whether it’s diving deep into a new language, experimenting with systems design, or hacking together side projects, I’m always exploring how code can bring ideas to life. Welcome to my corner of the internet.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container my-5">
+    <h2>My Projects</h2>
+    <!-- Project Cards: Dynamically generated from projects.yaml -->
+    <div class="row">
+      <!-- Project 1: beater -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="img/projects/beater.jpg" class="card-img-top project-img" alt="beater">
+          <div class="card-body">
+            <div class="tech-badges">
+              <img src="img/tech-icons/C.svg" alt="C" title="C">
+            </div>
+            <h5 class="card-title">beater</h5>
+            <p class="card-text">6052 based breadboard computer</p>
+            <a class="github-btn" href="https://github.com/micycle8778/beater" target="_blank">
+              <img src="img/github.svg" alt="GitHub">Source Code
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Project 2: fling_the_creeps -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="img/projects/fling_the_creeps.png" class="card-img-top project-img" alt="fling_the_creeps">
+          <div class="card-body">
+            <div class="tech-badges">
+              <img src="img/tech-icons/C++.svg" alt="C++" title="C++">
+              <img src="img/tech-icons/raylib.png" alt="raylib" title="raylib">
+            </div>
+            <h5 class="card-title">fling_the_creeps</h5>
+            <p class="card-text">simple game where you fling enemies at each other</p>
+            <a class="github-btn" href="https://github.com/micycle8778/fling_the_creeps" target="_blank">
+              <img src="img/github.svg" alt="GitHub">Source Code
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Project 3: qr-portal2d -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="img/projects/qr-portal2d.png" class="card-img-top project-img" alt="qr-portal2d">
+          <div class="card-body">
+            <div class="tech-badges">
+              <img src="img/tech-icons/rust.svg" alt="Rust" title="Rust">
+              <img src="img/tech-icons/HTML5.svg" alt="HTML5" title="HTML5">
+            </div>
+            <h5 class="card-title">qr-portal2d</h5>
+            <p class="card-text">QR code generator website</p>
+            <a class="github-btn" href="https://github.com/micycle8778/qr-portal2d" target="_blank">
+              <img src="img/github.svg" alt="GitHub">Source Code
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Project 4: crowncalc -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="img/projects/crowncalc.png" class="card-img-top project-img" alt="crowncalc">
+          <div class="card-body">
+            <div class="tech-badges">
+              <img src="img/tech-icons/nim.svg" alt="Nim" title="Nim">
+              <img src="img/tech-icons/SDL2.svg" alt="SDL2" title="SDL2">
+            </div>
+            <h5 class="card-title">crowncalc</h5>
+            <p class="card-text">basic graphical and text calculator</p>
+            <a class="github-btn" href="https://github.com/micycle8778/crowncalc" target="_blank">
+              <img src="img/github.svg" alt="GitHub">Source Code
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Project 5: host -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="img/projects/host.png" class="card-img-top project-img" alt="host">
+          <div class="card-body">
+            <div class="tech-badges">
+              <img src="img/tech-icons/nim.svg" alt="Nim" title="Nim">
+              <img src="img/tech-icons/HTML5.svg" alt="HTML5" title="HTML5">
+            </div>
+            <h5 class="card-title">host</h5>
+            <p class="card-text">simple command line utility for hosting static files</p>
+            <a class="github-btn" href="https://github.com/micycle8778/host" target="_blank">
+              <img src="img/github.svg" alt="GitHub">Source Code
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Project 6: YoYo -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="img/projects/yoyo.png" class="card-img-top project-img" alt="YoYo">
+          <div class="card-body">
+            <div class="tech-badges">
+              <img src="img/tech-icons/python.svg" alt="Python" title="Python">
+            </div>
+            <h5 class="card-title">YoYo</h5>
+            <p class="card-text">simple discord bot that repeats messages</p>
+            <a class="github-btn" href="https://github.com/micycle8778/YoYo" target="_blank">
+              <img src="img/github.svg" alt="GitHub">Source Code
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Project Cards -->
+  </section>
+
+  <!-- Optional: Add Bootstrap JS and dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="snow.js"></script>
 </body>
 </html>
