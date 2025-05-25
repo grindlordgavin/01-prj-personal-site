@@ -9,14 +9,14 @@ const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
 function resizeCanvas() {
-  const desiredWidth = window.innerWidth;
+  const desiredWidth = document.body.clientWidth;
   // desired height = nav height + hero height
   const desiredHeight = nav.offsetHeight + hero.offsetHeight;
 
   canvas.width = desiredWidth;
   canvas.height = desiredHeight;
 
-  console.log(`Canvas resized to ${canvas.width}x${canvas.height}`);
+  // console.log(`Canvas resized to ${canvas.width}x${canvas.height}`);
 }
 
 resizeCanvas(); // initial resize
@@ -77,7 +77,7 @@ for (let i = 0; i < 100; i++) {
 function update(deltaTime) {
   resizeCanvas(); // resize canvas to fit the viewport
 
-  console.log(`Updating snowflakes with deltaTime: ${deltaTime}`);
+  // console.log(`Updating snowflakes with deltaTime: ${deltaTime}`);
   if (deltaTime > 0.5) return; // skip if deltaTime is too large (e.g., if the tab was inactive)
   // draw orang color
   ctx.fillStyle = '#eb5e28';
