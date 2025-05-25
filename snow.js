@@ -19,9 +19,8 @@ function resizeCanvas() {
   console.log(`Canvas resized to ${canvas.width}x${canvas.height}`);
 }
 
-// resize canvas whenever viewport is resized
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas(); // also do it right now
+resizeCanvas(); // initial resize
+window.addEventListener('resize', resizeCanvas); // resize on window resize
 
 const PI = Math.PI;
 const SNOWFLAKE_SIDE_LENGTH = 7.5;
@@ -76,6 +75,8 @@ for (let i = 0; i < 100; i++) {
 }
 
 function update(deltaTime) {
+  resizeCanvas(); // resize canvas to fit the viewport
+
   console.log(`Updating snowflakes with deltaTime: ${deltaTime}`);
   if (deltaTime > 0.5) return; // skip if deltaTime is too large (e.g., if the tab was inactive)
   // draw orang color
