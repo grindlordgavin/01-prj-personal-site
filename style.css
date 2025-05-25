@@ -138,3 +138,44 @@ nav {
 #projects h2 {
   margin-bottom: 1.6rem;
 }
+
+section#contact a {
+  border-radius: 50%;
+  background: #eb5e28;
+
+  width: 85px;
+  height: 85px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.2s, background 0.2s;
+}
+
+#contact h2 {
+  font-size: 250%;
+  margin-bottom: 3rem;
+}
+
+section#contact a:hover {
+  transform: scale(1.18);
+}
+
+section#contact img {
+  filter: brightness(0) invert(93%) sepia(4%) saturate(759%) hue-rotate(324deg) brightness(102%) contrast(98%);
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  background: #eb5e28;
+  color: white;
+
+  align-items: center;
+  justify-content: center;
+}
+
+footer span {
+  margin: .5rem;
+}
